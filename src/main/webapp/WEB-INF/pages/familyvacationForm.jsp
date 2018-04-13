@@ -13,7 +13,7 @@
 <mvc:form modelAttribute="familyvacation" action="result.mvc">
 	<table>
 	    <tr>
-	        <td><mvc:label path="location">Location</mvc:label></td>
+	        <td><mvc:label path="location">Where do you want to go?</mvc:label></td>
 	        <td><mvc:input path="location" /></td>
 	    </tr>
 	    <tr>
