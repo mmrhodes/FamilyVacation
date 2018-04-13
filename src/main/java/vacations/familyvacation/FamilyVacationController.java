@@ -6,24 +6,24 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-
-
 @Controller
 public class FamilyVacationController {
-	@RequestMapping(value = "/form")
+	
+	@RequestMapping(value="/form")
 	public ModelAndView familyvacation() {
 		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName("familyvacationForm");
+		
+		modelAndView.setViewName("userForm");
 		modelAndView.addObject("familyvacation", new FamilyVacation());
 		
 		return modelAndView;
-	}
+}
 
 	@RequestMapping(value = "/result")
 	public ModelAndView processFamilyVacation(FamilyVacation familyvacation) {
 		System.out.println("In ProcessFamilyVacation");
 		ModelAndView modelAndView = new ModelAndView();
-		dao.insertFamilyVacation(familyvacation);
+		// dao.insertFamilyVacation(familyvacation);
 		System.out.println("Value in getLocation" + familyvacation.getLocation());
 		modelAndView.setViewName("familyvacationResult");
 		modelAndView.addObject("F", familyvacation);
@@ -33,16 +33,16 @@ public class FamilyVacationController {
 	@RequestMapping(value = "/viewAll")
 	public ModelAndView viewAll() {
 		ModelAndView modelAndView = new ModelAndView();
-		List<FamilyVacation> allFamilyVacation = dao.getAllFamilyVacation();
+		// List<FamilyVacation> allFamilyVacation = dao.getAllFamilyVacation();
 		modelAndView.setViewName("viewAllFamilyVacation");
-		modelAndView.addObject("all", allFamilyVacation);
+		// modelAndView.addObject("all", allFamilyVacation);
 		return modelAndView;
 
 	}
 
-	@Bean
-	public FamilyVacationDao dao() {
-		FamilyVacationDao bean = new FamilyVacationDao();
-		return bean;
-	}
+	// @Bean
+	// public FamilyVacationDao dao() {
+	// 	FamilyVacationDao bean = new FamilyVacationDao();
+	// 	return bean;
+	// }
 }
