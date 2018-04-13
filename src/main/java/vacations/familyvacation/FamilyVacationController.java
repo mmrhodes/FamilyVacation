@@ -13,29 +13,27 @@ public class FamilyVacationController {
 	public ModelAndView familyvacation() {
 		ModelAndView modelAndView = new ModelAndView();
 		
-		modelAndView.setViewName("userForm");
-		modelAndView.addObject("familyvacation", new FamilyVacation());
+		modelAndView.setViewName("FamilyvacationForm");
+		modelAndView.addObject("FamilyVacation", new FamilyVacation());
 		
 		return modelAndView;
 }
 
 	@RequestMapping(value = "/result")
 	public ModelAndView processFamilyVacation(FamilyVacation familyvacation) {
-		System.out.println("In ProcessFamilyVacation");
 		ModelAndView modelAndView = new ModelAndView();
 		// dao.insertFamilyVacation(familyvacation);
-		System.out.println("Value in getLocation" + familyvacation.getLocation());
 		modelAndView.setViewName("familyvacationResult");
-		modelAndView.addObject("F", familyvacation);
+		modelAndView.addObject("f", familyvacation);
 		return modelAndView;
 	}
 
 	@RequestMapping(value = "/viewAll")
 	public ModelAndView viewAll() {
 		ModelAndView modelAndView = new ModelAndView();
-		// List<FamilyVacation> allFamilyVacation = dao.getAllFamilyVacation();
+		List<FamilyVacation> allFamilyVacation = dao.getAllFamilyVacation();
 		modelAndView.setViewName("viewAllFamilyVacation");
-		// modelAndView.addObject("all", allFamilyVacation);
+		modelAndView.addObject("all", allFamilyVacation);
 		return modelAndView;
 
 	}
