@@ -1,6 +1,6 @@
 package vacations.familyvacation;
 
-public class familyvacation {
+public class FamilyVacation {
 	
 	private int id;
 	private String location;
