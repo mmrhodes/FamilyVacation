@@ -32,7 +32,7 @@
         </tr>
           <tr>
             <td>Who went</td>
-            <td>${f.whowent}</td>
+            <td>${f.whowent_id}</td>
         </tr>
         </table>
 <a href = "viewAll.mvc">View all Vacations</a>
