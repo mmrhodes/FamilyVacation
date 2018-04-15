@@ -30,5 +30,6 @@ EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("FamilyV
 		List<FamilyVacation> all = typedQuery.getResultList();
 		return all;
 	}
+
+	}
 	
-}
