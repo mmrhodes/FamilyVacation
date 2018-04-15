@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -18,7 +20,9 @@ public class FamilyVacation {
 	private String vacationdates;
 	private double cost;
 	private boolean beenthere;
-	private String whowent;
+	@ManyToOne
+	@JoinColumn(name="whowent_id")
+	private Vacationer people;
 	
 	
 	public int getId() {
@@ -59,11 +63,6 @@ public class FamilyVacation {
 	public void setBeenthere(boolean beenthere) {
 		this.beenthere = beenthere;
 	}
-	public String getWhowent() {
-		return whowent;
-	}
-	public void setWhowent(String whowent) {
-		this.whowent = whowent;
-	}
+	
 
 }
