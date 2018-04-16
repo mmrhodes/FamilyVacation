@@ -11,6 +11,7 @@
 </head>
 <body>
 	<c:forEach items="${all}" var="item">
+	<mvc:form modelAttribute = "item" action = "/editVacation">
 		<table>
 			<tr>
 				<td>Location</td>
@@ -28,6 +29,10 @@
 				<td>Cost</td>
 				<td>${item.cost}</td>
 			</tr>
+			<tr>
+				<td colspan = "2">
+				<input type = "submit" value = "Edit"/></td>
+			</tr>
 <!-- 			<tr> -->
 <!-- 				<td>Have I been there?</td> -->
 <%-- 				<td>${item.beenthere}</td> --%>
@@ -38,6 +43,7 @@
 <!-- 			</tr> -->
 			
 		</table>
+		</mvc:form>
 		<br />
 		<hr style="text-align: left; margin-left: 0; width: 25%">
 		<br />

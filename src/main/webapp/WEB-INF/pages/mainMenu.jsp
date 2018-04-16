@@ -9,6 +9,8 @@
 <body>
 <a href = "personForm.mvc">Add a family member</a><br />
 <a href = "form.mvc">Add a vacation</a><br />
+<a href = "viewAllPeople.mvc">View all family members</a><br />
+<a href = "viewAll.mvc">View all vacation spots</a><br />
 
 </body>
 </html>

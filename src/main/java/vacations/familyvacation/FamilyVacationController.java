@@ -2,32 +2,34 @@ package vacations.familyvacation;
 
 import java.util.List;
 
+import javax.persistence.EntityManager;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-
 @Controller
 public class FamilyVacationController {
-	@Autowired FamilyVacationDao familyVacationDao;
-	
-	@RequestMapping(value="/mainMenu")
+	@Autowired
+	FamilyVacationDao familyVacationDao;
+
+	@RequestMapping(value = "/mainMenu")
 	public ModelAndView vacationmenu() {
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("mainMenu");
-		return modelAndView;	
-}
-	
-	@RequestMapping(value="/form")
+		return modelAndView;
+	}
+
+	@RequestMapping(value = "/form")
 	public ModelAndView familyvacation() {
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("familyvacationForm");
 		modelAndView.addObject("familyvacation", new FamilyVacation());
-		return modelAndView;	
-}
-	
+		return modelAndView;
+	}
+
 	@RequestMapping(value = "/result")
 	public ModelAndView processFamilyVacation(FamilyVacation familyvacation) {
 		ModelAndView modelAndView = new ModelAndView();
@@ -36,7 +38,7 @@ public class FamilyVacationController {
 		modelAndView.addObject("f", familyvacation);
 		return modelAndView;
 	}
-	
+
 	@RequestMapping(value = "/viewAll")
 	public ModelAndView viewAll() {
 		ModelAndView modelAndView = new ModelAndView();
@@ -46,5 +48,14 @@ public class FamilyVacationController {
 		return modelAndView;
 
 	}
+
+	@RequestMapping(value = "/editVacation")
+	public ModelAndView searchForVacationById(FamilyVacation vacation) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("vacation", vacation);
+		modelAndView.setViewName("vacationToEdit");
+		return modelAndView;
+	}
+	
 	
 }
