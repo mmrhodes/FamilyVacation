@@ -26,14 +26,6 @@
             <td>Cost</td>
             <td>${f.cost}</td>
         </tr>      
-        <tr>
-            <td>I have been there</td>
-            <td>${f.beenthere}</td>
-        </tr>
-          <tr>
-            <td>Who went</td>
-            <td>${f.whowent_id}</td>
-        </tr>
         </table>
 <a href = "viewAll.mvc">View all Vacations</a>
 </body>
