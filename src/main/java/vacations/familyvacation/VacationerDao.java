@@ -9,11 +9,13 @@
 	import javax.persistence.TypedQuery;
 
 	import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+	@Component
 	public class VacationerDao {
 		
 		
-	EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("Vacationer");
+	EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("FamilyVacation");
 		
 
 		public void insertVacationer(Vacationer personToAdd) {

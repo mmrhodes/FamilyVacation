@@ -34,7 +34,7 @@
 			</tr>
 			<tr>
 				<td>Who went</td>
-				<td>${item.whowent}</td>
+				<td>${item.whowent_id}</td>
 			</tr>
 			
 		</table>
