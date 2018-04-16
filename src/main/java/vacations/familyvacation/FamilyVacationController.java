@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class FamilyVacationController {
-	@Autowired FamilyVacationDao dao;
+	@Autowired FamilyVacationDao familyVacationDao;
 	
 	@RequestMapping(value="/mainMenu")
 	public ModelAndView vacationmenu() {
@@ -31,7 +31,7 @@ public class FamilyVacationController {
 	@RequestMapping(value = "/result")
 	public ModelAndView processFamilyVacation(FamilyVacation familyvacation) {
 		ModelAndView modelAndView = new ModelAndView();
-		dao.insertFamilyVacation(familyvacation);
+		familyVacationDao.insertFamilyVacation(familyvacation);
 		modelAndView.setViewName("familyvacationResult");
 		modelAndView.addObject("f", familyvacation);
 		return modelAndView;
@@ -40,17 +40,11 @@ public class FamilyVacationController {
 	@RequestMapping(value = "/viewAll")
 	public ModelAndView viewAll() {
 		ModelAndView modelAndView = new ModelAndView();
-		List<FamilyVacation> allFamilyVacation = dao.getAllFamilyVacation();
+		List<FamilyVacation> allFamilyVacation = familyVacationDao.getAllFamilyVacation();
 		modelAndView.setViewName("viewAllFamilyVacation");
 		modelAndView.addObject("all", allFamilyVacation);
 		return modelAndView;
 
 	}
-
-	@Bean
-	public FamilyVacationDao dao() {
-		FamilyVacationDao bean = new FamilyVacationDao();
-	 	return bean;
-	 }
 	
 }

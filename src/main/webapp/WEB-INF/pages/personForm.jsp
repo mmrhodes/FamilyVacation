@@ -27,6 +27,6 @@
 	    </tr>
 	</table>  
 </mvc:form>
-<a href = "viewAll.mvc">View all People</a>
+<a href = "viewAllPeople.mvc">View all People</a>
 </body>
 </html>

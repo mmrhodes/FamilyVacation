@@ -41,9 +41,4 @@ public class VacationerController {
 
 	}
 	
-	@Bean
-	public VacationerDao dao() {
-		VacationerDao bean = new VacationerDao();
-	 	return bean;
-	 }
 }
