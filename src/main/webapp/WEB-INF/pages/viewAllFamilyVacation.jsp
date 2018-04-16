@@ -28,20 +28,21 @@
 				<td>Cost</td>
 				<td>${item.cost}</td>
 			</tr>
-			<tr>
-				<td>Have I been there?</td>
-				<td>${item.beenthere}</td>
-			</tr>
-			<tr>
-				<td>Who went</td>
-				<td>${item.whowent_id}</td>
-			</tr>
+<!-- 			<tr> -->
+<!-- 				<td>Have I been there?</td> -->
+<%-- 				<td>${item.beenthere}</td> --%>
+<!-- 			</tr> -->
+<!-- 			<tr> -->
+<!-- 				<td>Who went</td> -->
+<%-- 				<td>${item.whowent_id}</td> --%>
+<!-- 			</tr> -->
 			
 		</table>
 		<br />
 		<hr style="text-align: left; margin-left: 0; width: 25%">
 		<br />
 	</c:forEach>
-	<a href="form.mvc">Add a new family vacation</a>
+	<a href="form.mvc">Add a new family vacation</a><br />
+	<a href="mainMenu.mvc">Back to Menu</a>
 </body>
 </html>
