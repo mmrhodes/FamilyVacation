@@ -6,18 +6,68 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<style>
+body {
+	background-color: lightgreen;
+}
+
+
+input[type=submit] {
+	padding: 5px 15px;
+	background: #ccc;
+	border: 0 none;
+	cursor: pointer;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	font-size: 21px;
+	background-color: #F36C8C;
+	font-weight: bold;
+	text-shadow: 1px 1px #F36C8C;
+	color: #ffffff;
+	margin: 15px 15px 15px 55px;
+}
+
+a:link {
+	color: black;
+	font-family: verdana;
+	font-size: 125%;
+	font-weight: bold;
+	margin: 55px 55px 55px 55px;
+}
+
+/* visited link */
+a:visited {
+	color: purple;
+}
+/* mouse over link */
+a:hover {
+	color: red;
+}
+/* selected link */
+a:active {
+	color: yellow;
+}
+</style>
+
+
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Show that I went on this vacation</title>
 </head>
 <body>
-<form action="editAnimalDetailServlet" method="post">
-Name: <input type = "text" name = "AnimalName" value = "${itemToEdit.name}"><br />
+<form action="editVacation" method="post">
+Location: <input type = "text" name = "location" value = "${itemToEdit.location}"><br />
 
-Weight: <input type = "text" name = "AnimalWeight" value = "${itemToEdit.weight}"><br />
+Event: <input type = "text" name = "event" value = "${itemToEdit.event}"><br />
 
-Length: <input type = "text" name = "AnimalLength" value = "${itemToEdit.length}"><br />
+Vacation Dates: <input type = "text" name = "vacationdates" value = "${itemToEdit.vacationdates}"><br />
 
-Height: <input type = "text" name = "AnimalHeight" value = "${itemToEdit.height}"><br />
+Cost: <input type = "text" name = "cost" value = "${itemToEdit.cost}"><br />
+
+<label for="beenthere">I have been there:</label>
+<select name = "AnimalEggs">
+	<option value=0 ${itemToEdit.beenthere==false ? "selected" : ""}>false</option>
+	<option value=1 ${itemToEdit.beenthere==true ? "selected" : ""}>true</option>
+</select><br />
 
 <label for="AnimalDiet">Diet:</label>
 <select name="AnimalDiet">
