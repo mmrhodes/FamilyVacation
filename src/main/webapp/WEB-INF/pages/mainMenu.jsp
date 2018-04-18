@@ -28,7 +28,7 @@ a:link {
 	font-family: verdana;
 	font-size: 125%;
 	font-weight: bold;
-	margin: 55px 55px 55px 55px;
+	margin: 100px 100px 100px 250px;
 }
 
 /* visited link */
@@ -54,6 +54,7 @@ a:active {
 <a href = "form.mvc">Add a vacation</a><br />
 <a href = "viewAllPeople.mvc">View all family members</a><br />
 <a href = "viewAll.mvc">View all vacation spots</a><br />
-<img src="BoraBora.jpg"><img src="Denver.jpg">
+<img src="BoraBora.jpg"><br />
+<img src="Denver.jpg">
 </body>
 </html>
