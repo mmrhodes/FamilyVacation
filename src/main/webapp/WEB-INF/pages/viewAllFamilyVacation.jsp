@@ -58,6 +58,11 @@ a:active {
 	<mvc:form modelAttribute = "item" action = "/editVacation">
 		<table>
 			<tr>
+				<td>ID</td>
+				<td>${item.id}</td>
+			</tr>
+			
+			<tr>
 				<td>Location</td>
 				<td>${item.location}</td>
 			</tr>
