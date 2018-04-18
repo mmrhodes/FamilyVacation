@@ -8,6 +8,50 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Spring MVC From Handling</title>
 </head>
+<style>
+body {
+	background-color: lightgreen;
+}
+
+
+input[type=submit] {
+	padding: 5px 15px;
+	background: #ccc;
+	border: 0 none;
+	cursor: pointer;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	font-size: 21px;
+	background-color: #F36C8C;
+	font-weight: bold;
+	text-shadow: 1px 1px #F36C8C;
+	color: #ffffff;
+	margin: 15px 15px 15px 55px;
+}
+
+a:link {
+	color: black;
+	font-family: verdana;
+	font-size: 125%;
+	font-weight: bold;
+	margin: 55px 55px 55px 55px;
+}
+
+/* visited link */
+a:visited {
+	color: purple;
+}
+/* mouse over link */
+a:hover {
+	color: red;
+}
+/* selected link */
+a:active {
+	color: yellow;
+}
+</style>
+
+
 <body> <h2>Family Vacation List</h2>
     <table>
         <tr>
