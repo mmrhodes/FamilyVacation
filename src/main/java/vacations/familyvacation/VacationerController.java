@@ -11,8 +11,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class VacationerController {
-	@Autowired 
-	VacationerDao dao;
+	@Autowired VacationerDao dao;
+	@Autowired FamilyVacationDao familyVacationDao;
 
 	@RequestMapping(value="/personForm")
 	public ModelAndView vacationer() {
@@ -42,4 +42,13 @@ public class VacationerController {
 
 	}
 	
+	@RequestMapping(value = "/goOnVacation")
+	public ModelAndView viewAllVacations () {
+	ModelAndView modelAndView = new ModelAndView();
+	// modelAndView.addObject("id", result.getId());
+	List<FamilyVacation> allFamilyVacation = familyVacationDao.getAllFamilyVacation();
+	modelAndView.setViewName("goOnVacation");
+	modelAndView.addObject("all", allFamilyVacation);
+	return modelAndView;
+	}
 }

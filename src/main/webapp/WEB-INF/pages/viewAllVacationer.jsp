@@ -53,6 +53,7 @@ a:active {
 
 
 <c:forEach items="${all}" var="item">
+	<mvc:form modelAttribute = "item" action = "goOnVacation.mvc" method = "post">
 		<table>
 			<tr>
 				<td>First Name</td>
@@ -62,8 +63,13 @@ a:active {
 				<td>Last Name</td>
 				<td>${item.lastName}</td>
 			</tr>
-			
+			<tr>
+				<td colspan = "2">
+				<input name="id" type="hidden" value="${item.id}">
+				<input type = "submit" value = "Send on Vacation"/></td>
+			</tr>
 		</table>
+		</mvc:form>
 		<br />
 		<hr style="text-align: left; margin-left: 0; width: 25%">
 		<br />

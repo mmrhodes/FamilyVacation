@@ -78,14 +78,6 @@ a:active {
 				<input name="id" type="hidden" value="${item.id}">
 				<input type = "submit" value = "Edit"/></td>
 			</tr>
-<!-- 			<tr> -->
-<!-- 				<td>Have I been there?</td> -->
-<%-- 				<td>${item.beenthere}</td> --%>
-<!-- 			</tr> -->
-<!-- 			<tr> -->
-<!-- 				<td>Who went</td> -->
-<%-- 				<td>${item.whowent_id}</td> --%>
-<!-- 			</tr> -->
 			
 		</table>
 		</mvc:form>
