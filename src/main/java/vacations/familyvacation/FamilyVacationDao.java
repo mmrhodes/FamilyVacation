@@ -40,7 +40,13 @@ EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("FamilyV
 		return foundVacation;
 
 	}
-	
+	public void updateFamilyVacation(FamilyVacation toEdit) {
+		EntityManager em = emfactory.createEntityManager();
+		em.getTransaction().begin();
+		em.merge(toEdit);
+		em.getTransaction().commit();
+		em.close();
+	}
 	
 	}
 	

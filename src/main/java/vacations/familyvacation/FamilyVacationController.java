@@ -3,6 +3,7 @@ package vacations.familyvacation;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -12,8 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class FamilyVacationController {
-	@Autowired
-	FamilyVacationDao familyVacationDao;
+	@Autowired FamilyVacationDao familyVacationDao;
 
 	@RequestMapping(value = "/mainMenu")
 	public ModelAndView vacationmenu() {
@@ -50,12 +50,25 @@ public class FamilyVacationController {
 	}
 
 	@RequestMapping(value = "/editVacation")
-	public ModelAndView searchForVacationById(FamilyVacation vacation) {
+	public ModelAndView editVacation(HttpServletRequest request) {
 		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.addObject("vacation", vacation);
+		int id = Integer.parseInt(request.getParameter("id"));
+		FamilyVacation result = familyVacationDao.searchForVacationById(id);
 		modelAndView.setViewName("vacationToEdit");
+		modelAndView.addObject("vacation", new FamilyVacation());
+		modelAndView.addObject("id", result.getId());
+		modelAndView.addObject("location", result.getLocation());
+		modelAndView.addObject("event", result.getEvent());
+		modelAndView.addObject("vacationdates", result.getVacationdates());
+		modelAndView.addObject("cost", result.getCost());
 		return modelAndView;
 	}
 	
-	
+	@RequestMapping(value = "/updateFamilyVacation")
+	public ModelAndView updateFamilyVacation(FamilyVacation familyvacation, HttpServletRequest request) {
+		ModelAndView modelAndView = new ModelAndView();
+		familyVacationDao.updateFamilyVacation(familyvacation);
+		modelAndView.setViewName("viewAllFamilyVacation");
+		return modelAndView;
+}
 }
