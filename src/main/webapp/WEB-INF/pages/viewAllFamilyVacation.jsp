@@ -55,31 +55,27 @@ a:active {
 </head>
 <body>
 	<c:forEach items="${all}" var="item">
-	<mvc:form modelAttribute = "item" action = "/editVacation">
+	<mvc:form modelAttribute = "item" action = "editVacation.mvc" method = "post">
 		<table>
 			<tr>
-				<td>ID</td>
-				<td>${item.id}</td>
-			</tr>
-			
-			<tr>
-				<td>Location</td>
+				<td>Location: </td>
 				<td>${item.location}</td>
 			</tr>
 			<tr>
-				<td>Event</td>
+				<td>Event: </td>
 				<td>${item.event}</td>
 			</tr>
 			<tr>
-				<td>Vacation Dates</td>
+				<td>Vacation Dates: </td>
 				<td>${item.vacationdates}</td>
 			</tr>
 			<tr>
-				<td>Cost</td>
+				<td>Cost: </td>
 				<td>${item.cost}</td>
 			</tr>
 			<tr>
 				<td colspan = "2">
+				<input name="id" type="hidden" value="${item.id}">
 				<input type = "submit" value = "Edit"/></td>
 			</tr>
 <!-- 			<tr> -->
