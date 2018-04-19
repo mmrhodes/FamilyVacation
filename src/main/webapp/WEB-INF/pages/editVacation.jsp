@@ -64,11 +64,19 @@ Vacation Dates: <input type = "text" name = "vacationdates" value = "${itemToEdi
 
 Cost: <input type = "text" name = "cost" value = "${itemToEdit.cost}"><br />
 
-<label for="beenthere">I have been there:</label>
-<select name = "beenthere">
-	<option value=0 ${itemToEdit.beenthere==false ? "selected" : ""}>false</option>
-	<option value=1 ${itemToEdit.beenthere==true ? "selected" : ""}>true</option>
-</select><br />
+<table>
+<c:forEach items="${all}" var="item">
+		<table>
+			<tr>
+			<td><input type="radio" name="id" value="${item.id}"></td>
+				<td>${item.firstName}</td>
+				<td>${item.lastName}</td>
+			</tr>
+			
+		</table>
+		</c:forEach>
+</table>		
+
 <input type = "hidden" name = "id" value="${itemToEdit.id}">
 <input type = "submit" value = "Save Edited Item">
 </form>

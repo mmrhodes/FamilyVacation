@@ -19,12 +19,7 @@ public class FamilyVacation {
 	private String event;
 	private String vacationdates;
 	private double cost;
-	private boolean beenthere;
-	@ManyToOne
-	@JoinColumn(name="whowent_id")
-	private Vacationer people;
-	
-	
+		
 	public int getId() {
 		return id;
 	}
@@ -56,12 +51,6 @@ public class FamilyVacation {
 	}
 	public void setCost(double cost) {
 		this.cost = cost;
-	}
-	public boolean isBeenthere() {
-		return beenthere;
-	}
-	public void setBeenthere(boolean beenthere) {
-		this.beenthere = beenthere;
 	}
 	
 

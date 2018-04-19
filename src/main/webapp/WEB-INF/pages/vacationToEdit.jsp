@@ -29,10 +29,6 @@
 	        <td><input path="cost" value="${cost}"/></td>
 	    </tr>
 	    <tr>
-	        <td><label path="beenthere">Been There:</label></td>
-	        <td><input path="beenthere" value="${beenthere}" /></td>
-	    </tr>
-	    <tr>
 	        <td colspan="2">
                 <input type="submit" value="Submit" />
 	        </td>

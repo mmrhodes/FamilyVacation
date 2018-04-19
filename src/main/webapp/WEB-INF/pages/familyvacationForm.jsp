@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
     <%@ taglib uri="http://www.springframework.org/tags/form" prefix="mvc" %>
     <%@ page isELIgnored="false" %>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -72,7 +73,19 @@ a:active {
             <td><mvc:label path="cost">Cost</mvc:label></td>
             <td><mvc:input path="cost" /></td>
         </tr>
+       <c:forEach items="${all}" var="item">
+		<table>
+			<tr>
+			<td><input type="radio" name="id" value="${item.id}"></td>
+				<td>${item.firstName}</td>
+				<td>${item.lastName}</td>
+			</tr>
+			
+		</table>
+		</c:forEach>
+	
         <tr>
+       
 	        <td colspan="2">
                 <input type="submit" value="Submit" />
 	        </td>

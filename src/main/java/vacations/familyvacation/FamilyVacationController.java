@@ -14,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class FamilyVacationController {
 	@Autowired FamilyVacationDao familyVacationDao;
+	@Autowired VacationerDao dao;
 
 	@RequestMapping(value = "/mainMenu")
 	public ModelAndView vacationmenu() {
@@ -24,7 +25,9 @@ public class FamilyVacationController {
 
 	@RequestMapping(value = "/form")
 	public ModelAndView familyvacation() {
+		List<Vacationer> allVacationer = dao.getAllVacationer();
 		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("all", allVacationer);
 		modelAndView.setViewName("familyvacationForm");
 		modelAndView.addObject("familyvacation", new FamilyVacation());
 		return modelAndView;
@@ -51,7 +54,9 @@ public class FamilyVacationController {
 
 	@RequestMapping(value = "/editVacation")
 	public ModelAndView editVacation(HttpServletRequest request) {
+		List<Vacationer> allVacationer = dao.getAllVacationer();
 		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("all", allVacationer);
 		int id = Integer.parseInt(request.getParameter("id"));
 		FamilyVacation result = familyVacationDao.searchForVacationById(id);
 		modelAndView.setViewName("vacationToEdit");
@@ -61,6 +66,7 @@ public class FamilyVacationController {
 		modelAndView.addObject("event", result.getEvent());
 		modelAndView.addObject("vacationdates", result.getVacationdates());
 		modelAndView.addObject("cost", result.getCost());
+		System.out.println(allVacationer.toString());
 		return modelAndView;
 	}
 	
@@ -70,5 +76,8 @@ public class FamilyVacationController {
 		familyVacationDao.updateFamilyVacation(familyvacation);
 		modelAndView.setViewName("viewAllFamilyVacation");
 		return modelAndView;
-}
+	}
+	
+	@RequestMapping(value = "/plotVacation")
+	public ModelAndView plotVacation()
 }
