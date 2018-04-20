@@ -35,6 +35,12 @@ import org.springframework.stereotype.Component;
 			List<Vacationer> all = typedQuery.getResultList();
 			return all;
 		}
+
+
+		public Vacationer findId(Vacationer itemid) {
+			// TODO Auto-generated method stub
+			return null;
+		}
 		}
 		
 
