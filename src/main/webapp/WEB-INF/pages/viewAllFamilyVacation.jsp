@@ -70,7 +70,7 @@ a:active {
 				<td>${item.vacationdates}</td>
 			</tr>
 			<tr>
-				<td>Cost: </td>
+				<td>Cost per Person: </td>
 				<td>${item.cost}</td>
 			</tr>
 			<tr>
