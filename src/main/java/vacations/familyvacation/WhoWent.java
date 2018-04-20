@@ -39,6 +39,9 @@ public class WhoWent {
 	public void setFamilyVacation(FamilyVacation familyVacation) {
 		this.familyVacation = familyVacation;
 	}
+	public WhoWent() {
+		super();
+	}
 	
 	
 	
