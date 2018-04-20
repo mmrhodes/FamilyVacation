@@ -73,17 +73,7 @@ a:active {
             <td><mvc:label path="cost">Cost per Person</mvc:label></td>
             <td><mvc:input path="cost" /></td>
         </tr>
-       <c:forEach items="${all}" var="item">
-		<table>
-			<tr>
-			<td><input type="radio" name="id" value="${item.id}"></td>
-				<td>${item.firstName}</td>
-				<td>${item.lastName}</td>
-			</tr>
-			
-		</table>
-		</c:forEach>
-	
+       
         <tr>
        
 	        <td colspan="2">
