@@ -62,7 +62,7 @@ Event: <input type = "text" name = "event" value = "${itemToEdit.event}"><br />
 
 Vacation Dates: <input type = "text" name = "vacationdates" value = "${itemToEdit.vacationdates}"><br />
 
-Cost: <input type = "text" name = "cost" value = "${itemToEdit.cost}"><br />
+Cost per Person: <input type = "text" name = "cost" value = "${itemToEdit.cost}"><br />
 
 <table>
 <c:forEach items="${all}" var="item">

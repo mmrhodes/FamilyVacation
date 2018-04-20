@@ -4,6 +4,7 @@
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<class>vacations.familyvacation.FamilyVacation</class>
 		<class>vacations.familyvacation.Vacationer</class>
+		<class>vacations.familyvacation.WhoWent</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/familyvacation"/>

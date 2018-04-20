@@ -70,7 +70,7 @@ a:active {
 	        <td><mvc:input path="vacationdates" /></td>
 	    </tr>
 		<tr>
-            <td><mvc:label path="cost">Cost</mvc:label></td>
+            <td><mvc:label path="cost">Cost per Person</mvc:label></td>
             <td><mvc:input path="cost" /></td>
         </tr>
        <c:forEach items="${all}" var="item">
