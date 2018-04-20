@@ -79,18 +79,15 @@ public class FamilyVacationController {
 	}
 	
 //	@RequestMapping(value = "/plotVacation")
-//	public ModelAndView plotVacation() {
+//	public ModelAndView plotVacation(Vacationer itemid, FamilyVacation vacationid) {
 //			ModelAndView modelAndView = new ModelAndView();
-//			Vacationer vacationer = dao.findId(id);
+//			Vacationer vacationer = dao.findId(itemid);
 //			FamilyVacation familyVacation = familyVacationDao.findId(id);
 //			FamilyVacation.getAllVacationer.add(Vacationer);
 //			vacationer.getAllVacationer.add(familyVacation);
 //			dao.insertVacationer(vacationer);
 //			familyVacationDao.insertFamilyVacation(familyVacation);
-//			
-//			
-//			
-//			
+//		
 //			List<FamilyVacation> allFamilyVacation = familyVacationDao.getAllFamilyVacation();
 //			modelAndView.setViewName("viewAllVacationer");
 //			modelAndView.addObject("all", allFamilyVacation);
